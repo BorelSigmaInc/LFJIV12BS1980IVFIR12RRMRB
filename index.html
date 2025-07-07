@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Business Plan: Sustainable Leather Ecommerce Platform | Esteemed Client</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Source+Serif+Pro:wght@400;600&display=swap');
+        
+        :root {
+            --primary-color: #222;
+            --secondary-color: #444;
+            --background-color: #fff;
+            --border-color: #ddd;
+            --highlight-color: #2c3e50;
+            --accent-color: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Serif Pro', serif;
+            color: var(--primary-color);
+            background-color: var(--background-color);
+            line-height: 1.7;
+            font-weight: 300;
+            font-size: 10.5pt;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            counter-reset: section;
+        }
+        
+        .container {
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 0 30px rgba(0,0,0,0.05);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 18pt;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+            color: var(--highlight-color);
+        }
+        
+        .subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-size: 12pt;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+        
+        .author {
+            font-family: 'Roboto', sans-serif;
+            font-size: 11pt;
+            margin-bottom: 5px;
+        }
+        
+        .affiliation {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10pt;
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .date-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .date {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10pt;
+            color: #777;
+        }
+        
+        .know-more-button, .partnerships-button, .research-button {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10pt;
+            color: #fff;
+            background-color: #777;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+        }
+        
+        .know-more-button:hover, .partnerships-button:hover, .research-button:hover {
+            background-color: #555;
+        }
+        
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 13pt;
+            margin: 40px 0 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            counter-increment: section;
+            position: relative;
+            color: var(--highlight-color);
+        }
+        
+        h2::before {
+            content: counter(section) ". ";
+            color: var(--secondary-color);
+        }
+        
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 11.5pt;
+            margin: 30px 0 15px;
+            color: var(--secondary-color);
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        .abstract {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 3px solid var(--border-color);
+            margin-bottom: 30px;
+            font-style: italic;
+            border-radius: 4px;
+        }
+        
+        .abstract p:last-child {
+            margin-bottom: 0;
+        }
+        
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-bottom:  1px dotted #999;
+            transition: all 0.2s ease;
+        }
+        
+        a:hover {
+            color: var(--highlight-color);
+            border-bottom: 1px solid var(--highlight-color);
+        }
+        
+        ul, ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .figure {
+            text-align: center;
+            margin: 30px 0;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: #fafafa;
+        }
+        
+        .figure-content {
+            width: 100%;
+            height: 300px;
+            margin: 0 auto;
+        }
+        
+        .caption {
+            font-size: 9.5pt;
+            color: #666;
+            font-style: italic;
+            margin-top: 15px;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .result-card {
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 4px;
+        }
+        
+        .result-card h4 {
+            font-size: 11pt;
+            margin-bottom: 10px;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .link-item {
+            font-size: 9.5pt;
+            background: #f5f5f5;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+        
+        .link-item a {
+            border-bottom: none;
+        }
+        
+        .product-selector {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: #f9f9f9;
+        }
+        
+        .product-selector label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--secondary-color);
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .product-selector select {
+            width: 100%;
+            padding: 10px;
+            font-size: 10.5pt;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: white;
+            font-family: 'Source Serif Pro', serif;
+            color: var(--primary-color);
+        }
+        
+        .product-selector select:focus {
+            outline: none;
+            border-color: var(--highlight-color);
+            box-shadow: 0 0 5px rgba(44, 62, 80, 0.2);
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .pricing-table th, .pricing-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .pricing-table th {
+            background: #f9f9f9;
+            font-weight: 500;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .pricing-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 9pt;
+            color: #777;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 16pt;
+            }
+            
+            .subtitle {
+                font-size: 11pt;
+            }
+            
+            .figure-content {
+                height: 250px;
+            }
+            
+            .date-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .partnerships-button, .research-button {
+                width: 100%;
+                text-align: center;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Executive Business Plan: Sustainable Leather Ecommerce Platform</h1>
+            <div class="subtitle">Using computational models and machine learning to predict outcomes, analyze complex datasets, and reduce the need for physical experiments</div>
+            <div class="author"><a href="https://borelsigma.com/">Deepika Nair</a>, President, Borel Sigma Inc, HaaS & DWaaS</div>
+            <div class="affiliation">Sustainable Fashion Technology Ecosystem</div>
+            <div class="date-container">
+                <div class="date">July 7, 2025</div>
+                <div>
+                    <a href="https://esg-scientific-iin.github.io/LFJIV12BS1980IVFIR12BS/" class="partnerships-button">Partnerships Details</a>
+                    <a href="https://zenodo.org/records/15829624" class="research-button">Research Paper</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="abstract">
+            <h3>Executive Summary</h3>
+            <p>Esteemed Client aims to become the leading direct-to-consumer platform for premium animal-free leather fashion, leveraging AI-driven personalization and sustainable manufacturing. The platform targets $1.25M in revenue in Year 1, scaling to $14M by Year 3, with a customer acquisition cost of $35 (below the industry average of $50-70) and a projected ROI of 240% within 24 months. By Year 2, Esteemed Client seeks to be among the top three sustainable fashion e-retailers, driven by a vertically integrated supply chain, AI personalization, and a commitment to sustainability.</p>
+        </div>
+        
+        <h2>Strategic Business Units</h2>
+        
+        <div class="product-selector">
+            <label for="productCategory">Select Product Category:</label>
+            <select id="productCategory" name="productCategory">
+                <option value="jacket">Jacket</option>
+                <option value="bag">Bag</option>
+                <option value="shoes">Shoes</option>
+            </select>
+        </div>
+        
+        <h3>Core Ecommerce Platform</h3>
+        <p><strong>Primary Revenue Driver</strong></p>
+        <p><strong>Immediate Actions:</strong></p>
+        <ul>
+            <li>Launch MVP within 8 weeks using Next.js and AWS.</li>
+            <li>Focus on three hero products: jacket, bag, and shoes.</li>
+            <li>Implement dynamic pricing from day one.</li>
+        </ul>
+        <p><strong>Growth Levers:</strong></p>
+        <ul>
+            <li>Subscription service targeting 30% of customers by Month 6.</li>
+            <li>Increase Average Order Value from $150 to $250.</li>
+            <li>Improve conversion rate from 2% to 4% through AI personalization.</li>
+        </ul>
+        
+        <h3>AI Software Division</h3>
+        <p><strong>Technology Differentiator</strong></p>
+        <p><strong>Revenue Streams:</strong></p>
+        <ul>
+            <li>Internal use: Reduce returns by 40% with AI sizing.</li>
+            <li>External licensing: $200K in Year 1 from fashion retailers.</li>
+            <li>SaaS platform: $50K MRR by Year 2.</li>
+        </ul>
+        <p><strong>Priority Products:</strong></p>
+        <ul>
+            <li>FitAI: Virtual sizing reducing returns from 30% to 12%.</li>
+            <li>StyleGPT: Personalization engine increasing AOV by 35%.</li>
+            <li>InventoryIQ: Demand forecasting reducing overstock by 25%.</li>
+        </ul>
+        
+        <h3>Cloud Infrastructure</h3>
+        <p><strong>Scalability Engine</strong></p>
+        <p><strong>Cost Optimization:</strong></p>
+        <ul>
+            <li>Serverless architecture reducing hosting costs by 60%.</li>
+            <li>Auto-scaling preventing over-provisioning.</li>
+            <li>Multi-tenant platform for B2B offerings.</li>
+        </ul>
+        <p><strong>Revenue Opportunity:</strong></p>
+        <ul>
+            <li>White-label platform for other sustainable brands.</li>
+            <li>Infrastructure-as-a-Service: $150K in Year 1.</li>
+        </ul>
+        
+        <h3>Smart Hardware</h3>
+        <p><strong>Competitive Advantage</strong></p>
+        <p><strong>High-ROI Investments:</strong></p>
+        <ul>
+            <li>Smart Mirrors ($8K each, 15-month ROI).</li>
+            <li>RFID Inventory System ($10K, 6-month ROI).</li>
+            <li>Quality Control Cameras ($15K, 12-month ROI).</li>
+        </ul>
+        <p><strong>Revenue Model:</strong></p>
+        <ul>
+            <li>Hardware sales to manufacturers: $300K in Year 1.</li>
+            <li>Maintenance contracts: 20% annual recurring revenue.</li>
+        </ul>
+        
+        <h3>Business Intelligence</h3>
+        <p><strong>Strategic Decision Engine</strong></p>
+        <p><strong>Services:</strong></p>
+        <ul>
+            <li>Market intelligence reports.</li>
+            <li>Competitor analysis.</li>
+            <li>Pricing optimization consulting.</li>
+        </ul>
+        <p><strong>Value Proposition:</strong></p>
+        <ul>
+            <li>Data-driven decisions increasing profit margins by 15%.</li>
+            <li>Predictive analytics reducing inventory costs by 30%.</li>
+        </ul>
+        
+        <h2>Go-to-Market Strategy</h2>
+        
+        <h3>Phase 1: Foundation (Weeks 1-8)</h3>
+        <p><strong>Budget: $25,000</strong></p>
+        <p><strong>Technical Setup:</strong></p>
+        <ul>
+            <li>Deploy core ecommerce platform.</li>
+            <li>Integrate payment processing with <a href="https://stripe.com/">Stripe</a>.</li>
+            <li>Implement basic AI features.</li>
+        </ul>
+        <p><strong>Product Launch:</strong></p>
+        <ul>
+            <li>10 SKUs across 3 categories (jacket, bag, shoes).</li>
+            <li>Professional photography.</li>
+            <li>SEO-optimized product pages.</li>
+        </ul>
+        <p><strong>Marketing Activation:</strong></p>
+        <ul>
+            <li>Social media presence on platforms like Instagram.</li>
+            <li>Influencer partnerships with 5 micro-influencers.</li>
+            <li>Email list building targeting 1,000 subscribers.</li>
+        </ul>
+        
+        <h3>Phase 2: Growth (Months 3-6)</h3>
+        <p><strong>Budget: $50,000</strong></p>
+        <p><strong>Customer Acquisition:</strong></p>
+        <ul>
+            <li>Facebook/Instagram ads: $10K/month.</li>
+            <li>Google Shopping campaigns: $5K/month.</li>
+            <li>Content marketing: 2 blog posts/week.</li>
+        </ul>
+        <p><strong>Product Expansion:</strong></p>
+        <ul>
+            <li>Add 20 new SKUs.</li>
+            <li>Launch subscription box service.</li>
+            <li>Introduce limited editions.</li>
+        </ul>
+        <p><strong>Technology Enhancement:</strong></p>
+        <ul>
+            <li>Deploy advanced AI features.</li>
+            <li>Launch mobile app.</li>
+            <li>Implement AR try-on.</li>
+        </ul>
+        
+        <h3>Phase 3: Scale (Months 7-12)</h3>
+        <p><strong>Budget: $100,000</strong></p>
+        <p><strong>Market Expansion:</strong></p>
+        <ul>
+            <li>International shipping to 5 countries.</li>
+            <li>Wholesale B2B platform.</li>
+            <li>Pop-up retail experiences.</li>
+        </ul>
+        <p><strong>Strategic Partnerships:</strong></p>
+        <ul>
+            <li>Sustainable fashion collectives.</li>
+            <li>Environmental organizations.</li>
+            <li>Celebrity endorsements.</li>
+        </ul>
+        <p><strong>Platform Monetization:</strong></p>
+        <ul>
+            <li>License AI technology.</li>
+            <li>Offer fulfillment services.</li>
+            <li>Launch affiliate program.</li>
+        </ul>
+        
+        <h2>Financial Projections</h2>
+        
+        <div class="figure">
+            <div class="figure-content">
+                <canvas id="revenueChart"></canvas>
+            </div>
+            <div class="caption">Figure 1: Projected revenue growth over 3 years, showing Year 1 at $1.25M scaling to $14M by Year 3.</div>
+        </div>
+        
+        <div class="figure">
+            <div class="figure-content">
+                <canvas id="revenueBreakdownChart"></canvas>
+            </div>
+            <div class="caption">Figure 2: Year 1 revenue breakdown: Direct Sales ($400K, 80%), Subscriptions ($75K, 15%), B2B/Licensing ($25K, 5%).</div>
+        </div>
+        
+        <h3>Cost Structure</h3>
+        <ul>
+            <li>COGS: 35% (industry average: 50%).</li>
+            <li>Marketing: 25%.</li>
+            <li>Technology: 15%.</li>
+            <li>Operations: 15%.</li>
+            <li>Profit Margin: 10%.</li>
+        </ul>
+        
+        <h3>Unit Economics</h3>
+        <ul>
+            <li>Customer Acquisition Cost: $35.</li>
+            <li>Customer Lifetime Value: $450.</li>
+            <li>LTV:CAC Ratio: 12.9:1 (excellent).</li>
+            <li>Payback Period: 2.3 months.</li>
+        </ul>
+        
+        <h2>Competitive Advantages</h2>
+        
+        <div class="results-grid">
+            <div class="result-card">
+                <h4>AI-Powered Personalization</h4>
+                <ul>
+                    <li>40% higher conversion rates.</li>
+                    <li>60% reduction in returns.</li>
+                    <li>35% increase in repeat purchases.</li>
+                </ul>
+            </div>
+            <div class="result-card">
+                <h4>Vertically Integrated Supply Chain</h4>
+                <ul>
+                    <li>30% lower production costs.</li>
+                    <li>50% faster time-to-market.</li>
+                    <li>Complete quality control.</li>
+                </ul>
+            </div>
+            <div class="result-card">
+                <h4>Data-Driven Operations</h4>
+                <ul>
+                    <li>Real-time demand forecasting.</li>
+                    <li>Dynamic pricing optimization.</li>
+                    <li>Predictive customer service.</li>
+                </ul>
+            </div>
+            <div class="result-card">
+                <h4>Sustainability Leadership</h4>
+                <ul>
+                    <li>Carbon-neutral shipping.</li>
+                    <li>Blockchain supply chain transparency.</li>
+                    <li>Circular economy program.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Risk Mitigation</h2>
+        
+        <h3>Market Risks</h3>
+        <ul>
+            <li><strong>Competition:</strong> Patent-pending AI technology creates barriers.</li>
+            <li><strong>Economic Downturn:</strong> Focus on value pricing and quality.</li>
+            <li><strong>Supply Chain:</strong> Multiple supplier relationships.</li>
+        </ul>
+        
+        <h3>Technical Risks</h3>
+        <ul>
+            <li><strong>Scalability:</strong> Cloud-native architecture ensures growth.</li>
+            <li><strong>Security:</strong> SOC 2 compliance and regular audits.</li>
+            <li><strong>Downtime:</strong> 99.9% uptime SLA with redundancy.</li>
+        </ul>
+        
+        <h3>Financial Risks</h3>
+        <ul>
+            <li><strong>Cash Flow:</strong> 6-month runway maintained.</li>
+            <li><strong>Inventory:</strong> Just-in-time manufacturing.</li>
+            <li><strong>Currency:</strong> Multi-currency hedging strategy.</li>
+        </ul>
+        
+        <h2>Key Performance Indicators</h2>
+        
+        <div class="results-grid">
+            <div class="result-card">
+                <h4>Growth Metrics</h4>
+                <ul>
+                    <li>Monthly Recurring Revenue Growth: 20% MoM.</li>
+                    <li>Customer Acquisition Rate: 500 new customers/month.</li>
+                    <li>Market Share: 5% of sustainable leather market.</li>
+                </ul>
+            </div>
+            <div class="result-card">
+                <h4>Efficiency Metrics</h4>
+                <ul>
+                    <li>Inventory Turnover: 8.5x annually.</li>
+                    <li>Cart Abandonment Rate: <60%.</li>
+                    <li>Customer Support Resolution: <2 hours.</li>
+                </ul>
+            </div>
+            <div class="result-card">
+                <h4>Customer Metrics</h4>
+                <ul>
+                    <li>Net Promoter Score: >70.</li>
+                    <li>Repeat Purchase Rate: >40%.</li>
+                    <li>Average Customer Lifetime: 24 months.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Implementation Timeline</h2>
+        <ul>
+            <li>Months 1-2: Platform development and launch.</li>
+            <li>Months 3-4: Customer acquisition and feedback.</li>
+            <li>Months 5-6: Product line expansion.</li>
+            <li>Months 7-8: Technology licensing launch.</li>
+            <li>Months 9-10: International expansion.</li>
+            <li>Months 11-12: Series A preparation.</li>
+        </ul>
+        
+        <h2>Funding Requirements</h2>
+        
+        <h3>Immediate Needs (Seed)</h3>
+        <ul>
+            <li>Amount: $250,000.</li>
+            <li>Use: Platform development, initial inventory, marketing.</li>
+            <li>Expected ROI: 300% within 18 months.</li>
+        </ul>
+        
+        <h3>Growth Capital (Series A)</h3>
+        <ul>
+            <li>Amount: $2-3M (Month 12).</li>
+            <li>Use: Scaling operations, technology development, market expansion.</li>
+            <li>Valuation Target: $15-20M.</li>
+        </ul>
+        
+        <h2>Success Factors</h2>
+        <ul>
+            <li>Speed to Market: Launch MVP in 8 weeks.</li>
+            <li>Customer Obsession: NPS >70 from day one.</li>
+            <li>Data-Driven Decisions: Weekly KPI reviews.</li>
+            <li>Sustainable Growth: Positive unit economics by Month 3.</li>
+            <li>Innovation Leadership: 2 patents filed in Year 1.</li>
+        </ul>
+        
+        <h2>Next Steps</h2>
+        <ul>
+            <li>Week 1: Finalize tech stack and begin development.</li>
+            <li>Week 2: Secure initial inventory and suppliers.</li>
+            <li>Week 3: Launch pre-order campaign.</li>
+            <li>Week 4: Begin influencer outreach.</li>
+            <li>Week 8: Official platform launch.</li>
+        </ul>
+        
+        <div class="links">
+            <div class="link-item">
+                <strong>Source Code:</strong> 
+                <a href="https://github.com/orgs/borel-sigma/repositories" target="_blank">GitHub Repository</a>
+            </div>
+            <div class="link-item">
+                <strong>Contact:</strong> 
+                <a href="mailto:corporate@borelsigma.com">corporate@borelsigma.com</a>
+            </div>
+            <div class="link-item">
+                <strong>Partnerships:</strong> 
+                <a href="https://aws.amazon.com/">AWS Cloud Infrastructure</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p><a href="https://borelsigma.com/">Deepika Nair</a>, President, Borel Sigma Inc, HaaS & DWaaS | Sustainable Leather Ecommerce Platform</p>
+            <p>Contributors: Deepika N, Muskan S, Kalinga S, Vipul J</p>
+            <p>© 2025 Sustainable Fashion Technology Ecosystem | All Rights Reserved</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Initialize chart variables
+        let revenueChart = null;
+        let revenueBreakdownChart = null;
+        
+        // Revenue data for 3 years
+        const years = ['Year 1', 'Year 2', 'Year 3'];
+        const totalRevenue = [1250, 5000, 14000]; // in thousands ($K)
+        
+        // Year 1 revenue breakdown
+        const revenueSources = ['Direct Sales', 'Subscriptions', 'B2B/Licensing'];
+        const year1Revenue = [400, 75, 25]; // in thousands ($K)
+        
+        // Initialize revenue growth chart
+        function initRevenueChart() {
+            const ctx = document.getElementById('revenueChart').getContext('2d');
+            revenueChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: years,
+                    datasets: [{
+                        label: 'Total Revenue ($K)',
+                        data: totalRevenue,
+                        borderColor: '#2c3e50',
+                        backgroundColor: 'rgba(44, 62, 80, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.3,
+                        fill: true,
+                        pointRadius: 6,
+                        pointBackgroundColor: '#2c3e50'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Revenue ($K)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return 'Revenue: $' + context.parsed.y + 'K';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Initialize revenue breakdown chart
+        function initRevenueBreakdownChart() {
+            const ctx = document.getElementById('revenueBreakdownChart').getContext('2d');
+            revenueBreakdownChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: revenueSources,
+                    datasets: [{
+                        label: 'Year 1 Revenue ($K)',
+                        data: year1Revenue,
+                        backgroundColor: ['rgba(52, 152, 219, 0.8)', 'rgba(46, 204, 113, 0.8)', 'rgba(231, 76, 60, 0.8)']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Revenue ($K)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': $' + context.parsed.y + 'K';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Product category descriptions
+        const productData = {
+            jacket: {
+                description: 'Premium animal-free leather jackets, designed for durability and style, enhanced by AI-driven sizing for perfect fit.'
+            },
+            bag: {
+                description: 'Sustainable leather bags, combining eco-friendly materials with modern design, optimized with AI personalization.'
+            },
+            shoes: {
+                description: 'High-quality animal-free leather shoes, crafted for comfort and sustainability, supported by AR try-on technology.'
+            }
+        };
+        
+        // Update product description based on selection
+        function updateProductDescription() {
+            const selectedCategory = document.getElementById('productCategory').value;
+            const product = productData[selectedCategory];
+            console.log('Selected product:', product.description);
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initRevenueChart();
+            initRevenueBreakdownChart();
+            
+            // Add event listener to product selector
+            document.getElementById('productCategory').addEventListener('change', updateProductDescription);
+            
+            // Initialize with default product
+            updateProductDescription();
+        });
+    </script>
+</body>
+</html>
